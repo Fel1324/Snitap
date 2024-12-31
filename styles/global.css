@@ -27,6 +27,7 @@ html, body{
   min-height: 100vh;
   height: auto;
 
+  background-color: var(--background);
   font: 500 var(--text-base)/1.5 var(--ff-base);
 }
 
