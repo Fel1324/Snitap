@@ -136,6 +136,45 @@ section.hero{
   }
 }
 
+@media screen and (width <= 1130px) {
+  section.hero{
+    flex-direction: column-reverse;
+
+    h1{
+      text-align: center;
+      span{
+        text-align: left;
+      }
+    }
+
+    .buttons{
+      flex-direction: column;
+      align-items: center;
+      
+      .button{
+        max-width: 17.75rem;
+      }
+    }
+
+    & > div:nth-child(2) .content img[src*="stars-2"]{
+      transform: translateX(900%);
+      animation: slideIn 2.2s 650ms ease forwards;
+    }
+  }
+}
+
+/* @media screen and (width <= 614px) {
+  section.hero{
+    h1{
+      font-size: 2rem;
+
+      div{
+        height: 2.5rem;
+      }
+    }
+  }
+} */
+
 @keyframes slideIn {
   50%{
     transform: translateX(-20px);

@@ -97,6 +97,24 @@ section.gallery{
   }
 }
 
+@media screen and (width <= 1024px){
+  section.gallery .content {
+    grid-template-areas: 
+    "A B"
+    "C D";
+  }
+}
+
+@media screen and (width <= 810px){
+  section.gallery .content {
+    grid-template-areas: 
+    "A"
+    "B"
+    "C"
+    "D";
+  }
+}
+
 @keyframes image-appear {
   from{
     opacity: 0;
