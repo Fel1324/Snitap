@@ -115,6 +115,12 @@ section.gallery{
   }
 }
 
+@media screen and (width <= 500px) {
+  section.gallery .content figure > img{
+    height: 16rem;
+  }
+}
+
 @keyframes image-appear {
   from{
     opacity: 0;

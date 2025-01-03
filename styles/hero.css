@@ -14,6 +14,7 @@ section.hero{
     max-width: 40rem;
   
     div{
+      --animation-height: -5rem;
       display: inline-block;
       vertical-align: bottom;
       overflow: hidden;
@@ -148,7 +149,7 @@ section.hero{
     }
 
     .buttons{
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       
       .button{
@@ -163,17 +164,68 @@ section.hero{
   }
 }
 
-/* @media screen and (width <= 614px) {
+@media screen and (width <= 500px) {
+  section.hero{
+    h1{
+      font-size: 3rem;
+      text-align: left;
+
+      div{
+        --animation-height: -3.75rem;
+        height: 3.75rem;
+      }
+    }
+
+    .buttons{
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (width <= 478px) {
   section.hero{
     h1{
       font-size: 2rem;
 
       div{
+        --animation-height: -2.5rem;
         height: 2.5rem;
       }
     }
+
+    .buttons{
+      align-items: flex-start;
+    }
+
+    & > div:nth-child(2){
+      height: 24.375rem;
+      margin-bottom: 2.5rem;
+    }
   }
-} */
+}
+
+@media screen and (width <= 425px) {
+  section.hero > div:nth-child(2){
+    height: 19.5rem;
+    margin-bottom: 4rem;
+
+    img[src*="stars-1"]{
+      width: 3.5rem;
+      height: 2.875rem;
+    }
+
+    img[src*="stars-2"]{
+      width: 1.625rem;
+      height: 2.375rem;
+    }
+  }
+}
+
+@media screen and (width <= 400px) {
+  section.hero > div:nth-child(2){
+    margin-bottom: 2rem;
+  }
+}
 
 @keyframes slideIn {
   50%{
@@ -199,66 +251,66 @@ section.hero{
 
   /* divertida in */
   23%{
-    transform: translateY(calc(-5rem - 15px));
+    transform: translateY(calc(var(--animation-height) - 15px));
   }
 
   25%{
-    transform: translateY(calc(-5rem + 10px));
+    transform: translateY(calc(var(--animation-height) + 10px));
   }
 
   27%{
-    transform: translateY(calc(-5rem - 5px));
+    transform: translateY(calc(var(--animation-height) - 5px));
   }
 
   29%{
-    transform: translateY(calc(-5rem + 5px));
+    transform: translateY(calc(var(--animation-height) + 5px));
   }
   
   /* divertida static */
   33%, 55%{
-    transform: translateY(-5rem);
+    transform: translateY(var(--animation-height));
   }
 
   /* saudável in */
   56%{
-    transform: translateY(calc(-10rem - 15px));
+    transform: translateY(calc((var(--animation-height) * 2) - 15px));
   }
 
   58%{
-    transform: translateY(calc(-10rem + 10px));
+    transform: translateY(calc((var(--animation-height) * 2) + 10px));
   }
 
   60%{
-    transform: translateY(calc(-10rem - 5px));
+    transform: translateY(calc((var(--animation-height) * 2) - 5px));
   }
 
   62%{
-    transform: translateY(calc(-10rem + 5px));
+    transform: translateY(calc((var(--animation-height) * 2) + 5px));
   }
 
   /* saudável static */
   66%, 88%{
-    transform: translateY(-10rem);
+    transform: translateY(calc(var(--animation-height) * 2));
   }
 
   /* radical in  */
   89%{
-    transform: translateY(calc(-15rem - 15px));
+    transform: translateY(calc((var(--animation-height) * 3) - 15px));
   }
 
   91%{
-    transform: translateY(calc(-15rem + 10px));
+    transform: translateY(calc((var(--animation-height) * 3) + 10px));
   }
 
   93%{
-    transform: translateY(calc(-15rem - 5px));
+    transform: translateY(calc((var(--animation-height) * 3) - 5px));
   }
 
   95%{
-    transform: translateY(calc(-15rem + 5px));
+    transform: translateY(calc((var(--animation-height) * 3) + 5px));
   }
 
   100%{
-    transform: translateY(-15rem);
+    transform: translateY(calc(var(--animation-height) * 3));
   }
 }
