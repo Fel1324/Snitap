@@ -166,6 +166,8 @@ section.hero{
 
 @media screen and (width <= 500px) {
   section.hero{
+    padding-inline: 1.5rem;
+
     h1{
       font-size: 3rem;
       text-align: left;
@@ -209,14 +211,17 @@ section.hero{
     height: 19.5rem;
     margin-bottom: 4rem;
 
-    img[src*="stars-1"]{
-      width: 3.5rem;
-      height: 2.875rem;
-    }
-
-    img[src*="stars-2"]{
-      width: 1.625rem;
-      height: 2.375rem;
+    .content{
+      img[src*="stars-1"]{
+        width: 3.5rem;
+        height: 2.875rem;
+        transform: translateX(500%);
+      }
+  
+      img[src*="stars-2"]{
+        width: 1.625rem;
+        height: 2.375rem;
+      }
     }
   }
 }

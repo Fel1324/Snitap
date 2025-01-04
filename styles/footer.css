@@ -110,3 +110,9 @@ footer{
     }
   }
 }
+
+@media screen and (width <= 500px) {
+  footer{
+    padding-inline: 1.5rem;
+  }
+}

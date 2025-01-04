@@ -116,8 +116,12 @@ section.gallery{
 }
 
 @media screen and (width <= 500px) {
-  section.gallery .content figure > img{
-    height: 16rem;
+  section.gallery{
+    padding-inline: 1.5rem;
+
+    .content figure > img{
+      height: 16rem;
+    }
   }
 }
 
